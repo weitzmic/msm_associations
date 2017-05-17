@@ -17,6 +17,9 @@
       <dt>Image url</dt>
       <dd><%= @actor.image_url %></dd>
 
+      <dt>Number of Actor's Characters</dt>
+      <dd><%= Character.where(:actor_id => @actor.id).count %></dd>
+
     </dl>
 
     <div class="btn-group btn-group-justified">
