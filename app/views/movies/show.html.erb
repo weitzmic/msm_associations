@@ -22,7 +22,7 @@
 
       <dt>Director</dt>
       <dd><a href="/directors/<%= @movie.director_id %>">
-        <%= Director.find_by(:id => @movie.director_id).name %></dd>
+        <%= @movie.director.name %>
 
 
 </a>
@@ -41,3 +41,10 @@
     </div>
   </div>
 </div>
+
+<ul>
+  <% @movie.characters.each do |character| %>
+  <li><%= character.actor.name %></li>
+
+<% end %>
+</ul>
